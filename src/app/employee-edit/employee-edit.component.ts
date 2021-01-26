@@ -20,11 +20,12 @@ export class EmployeeEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+    alert("");
     this.user.getProject(this.id).subscribe(projectData => {
       this.user.getEmployee(this.id).subscribe(employeeData => {
         this.projectData = projectData;
         this.employeeData = employeeData;
+     
       });
     });
   }

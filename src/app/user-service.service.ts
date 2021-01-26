@@ -10,7 +10,7 @@ import { Project } from './shared/project';
 })
 export class UserServiceService {
   // Define API
-  apiURL = 'http://192.168.1.5:8080';
+  apiURL = 'http://localhost:8080';
 
   constructor(private http : HttpClient) { }
 
@@ -40,7 +40,7 @@ export class UserServiceService {
   }
    // HttpClient API get() method => Fetch employee
    getEmployee(eid: number): Observable<Employee> {
-    return this.http.get<Employee>("http://192.168.1.5:8080/getEmployeeById/" +eid);
+    return this.http.get<Employee>(this.apiURL + '/getEmployeeById/' +eid);
    
   }  
 
