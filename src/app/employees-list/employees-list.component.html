@@ -1,0 +1,35 @@
+<div class="container custom-container-2">
+
+    <!-- Employees list table, it hides when there is no employee -->
+   
+      <h3 class="mb-3 text-center">Employees List</h3>
+  
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">User Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Project Assign</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of reportdetailslist">
+              <td>{{employee.eid}}</td>
+              <td>{{employee.name}}</td>
+              <td>{{employee.address}}</td>
+             
+              <td>
+                <span class="edit" routerLink="/employee-edit/{{employee.eid}}">Check Project</span>
+              
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    
+  
+  </div>
